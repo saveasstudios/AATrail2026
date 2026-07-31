@@ -1,0 +1,171 @@
+<div id="loanCardContainer">
+
+    <!-- =========================
+         FRONT SIDE
+    ========================== -->
+
+    <section class="loan-card front">
+
+        <div class="company-header">
+
+            <img src="images/logo.png"
+                 class="company-logo"
+                 alt="Logo">
+
+            <h1>AARVEE ASSOCIATES</h1>
+
+            <p>Near Bus Stand, Kottur</p>
+
+            <p>📞 8248510416 | 8838224040</p>
+
+        </div>
+
+        <table class="card-details">
+
+            <tr>
+                <td>Loan No</td>
+                <td id="lcLoanNo"></td>
+            </tr>
+
+            <tr>
+                <td>Customer Name</td>
+                <td id="lcCustomerName"></td>
+            </tr>
+
+            <tr>
+                <td>Group</td>
+                <td id="lcGroup"></td>
+            </tr>
+
+            <tr>
+                <td>Mobile</td>
+                <td id="lcMobile"></td>
+            </tr>
+
+            <tr>
+                <td>Loan Date</td>
+                <td id="lcLoanDate"></td>
+            </tr>
+
+            <tr>
+                <td>Loan Amount</td>
+                <td>₹ <span id="lcLoanAmount"></span></td>
+            </tr>
+
+            <tr>
+                <td>Interest</td>
+                <td><span id="lcInterest"></span>%</td>
+            </tr>
+
+            <tr>
+                <td>Total Amount</td>
+                <td>₹ <span id="lcTotalAmount"></span></td>
+            </tr>
+
+            <tr>
+                <td>Outstanding</td>
+                <td>₹ <span id="lcBalance"></span></td>
+            </tr>
+
+        </table>
+
+        <div class="loan-rules">
+
+            <h3>Loan Categories</h3>
+
+            <ul>
+
+                <li>✔ வீடு கட்ட கடன்</li>
+                <li>✔ வீடு அடமான கடன்</li>
+                <li>✔ காலி இடம் அடமான கடன்</li>
+                <li>✔ தனிநபர் கடன்</li>
+                <li>✔ வியாபார கடன்</li>
+                <li>✔ விவசாய கடன்</li>
+                <li>✔ வணிக கடன்</li>
+                <li>✔ நகை கடன்</li>
+
+            </ul>
+
+            <h4>
+
+                அதிக வட்டியுள்ள அடகு நகைகளை
+                மீட்டு குறைந்த வட்டியில்
+                மாற்றித் தரப்படும்.
+
+            </h4>
+
+        </div>
+
+    </section>
+
+    <div class="page-break"></div>
+
+    <!-- =========================
+         BACK SIDE
+    ========================== -->
+
+    <section class="loan-card back">
+
+        <h2 class="emi-title">
+
+            EMI PAYMENT RECORD
+
+        </h2>
+
+        <table class="emi-card-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>S.No</th>
+
+                    <th>Date</th>
+
+                    <th>Amount</th>
+
+                    <th>Sign</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="emiCardRows">
+
+            </tbody>
+
+            <tfoot>
+
+                <tr>
+
+                    <th colspan="2">
+
+                        TOTAL
+
+                    </th>
+
+                    <th id="emiTotal"></th>
+
+                    <th></th>
+
+                </tr>
+
+            </tfoot>
+
+        </table>
+
+    </section>
+
+</div>
+
+<div class="no-print">
+
+    <button
+        class="btn btn-primary"
+        onclick="printLoanCard()">
+
+        🖨 Print Loan Card
+
+    </button>
+
+</div>

@@ -1,0 +1,111 @@
+<div class="card">
+
+    <div class="page-header">
+
+        <h2>Guarantor Management</h2>
+
+        <button class="btn btn-primary" id="addGuarantorBtn">
+            + Add Guarantor
+        </button>
+
+    </div>
+
+    <br>
+
+    <input type="text"
+           id="searchGuarantor"
+           placeholder="Search Guarantor">
+
+    <br><br>
+
+    <div class="table-responsive">
+
+<table class="data-table">
+
+        <thead>
+
+            <tr>
+
+                <th>ID</th>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Customer</th>
+                <th>Status</th>
+                <th>Action</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="guarantorTable">
+
+            <tr>
+
+                <td colspan="6" style="text-align:center">
+
+                    No Guarantors Found
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<div class="modal hidden" id="guarantorModal">
+
+    <div class="modal-box">
+
+        <h2 id="guarantorTitle">
+
+            Add Guarantor
+
+        </h2>
+
+        <br>
+
+        <label>Guarantor ID</label>
+
+        <input id="guarantorID" readonly>
+
+        <label>Name</label>
+
+        <input id="guarantorName">
+
+        <label>Mobile</label>
+
+        <input id="guarantorMobile">
+
+        <label>Customer</label>
+
+        <select id="guarantorCustomer">
+
+            <option value="">Select Customer</option>
+
+        </select>
+
+        <label>Status</label>
+
+        <select id="guarantorStatus">
+
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+
+        </select>
+
+        <br><br>
+
+        <button class="btn btn-success" id="saveGuarantor">
+            Save
+        </button>
+
+        <button class="btn btn-danger" id="closeGuarantor">
+            Cancel
+        </button>
+
+    </div>
+
+</div>

@@ -1,0 +1,261 @@
+<div class="card">
+
+    <div class="page-header">
+
+        <h2>Customer Management</h2>
+
+        <button class="btn btn-primary" id="addCustomerBtn">
+            + Add Customer
+        </button>
+
+    </div>
+
+    <br>
+
+    <input
+        type="text"
+        id="searchCustomer"
+        placeholder="Search Customer">
+
+    <br><br>
+
+    <div class="table-responsive">
+
+<table class="data-table">
+
+        <thead>
+
+            <tr>
+
+                <th>Customer ID</th>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Group</th>
+                <th>Village</th>
+                <th>Status</th>
+                <th>Action</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="customerTable">
+
+            <tr>
+
+                <td colspan="7" style="text-align:center">
+
+                    No Customers Found
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<!-- Customer Modal -->
+
+<div class="modal hidden" id="customerModal">
+
+<div class="modal-box" style="width:900px;">
+
+<h2 id="customerTitle">
+
+Add Customer
+
+</h2>
+
+<br>
+
+<div class="form-grid">
+
+<div>
+
+<label>Customer ID</label>
+
+<input
+id="customerID"
+readonly>
+
+</div>
+
+<div>
+
+<label>Customer Name</label>
+
+<input
+id="customerName">
+
+</div>
+
+<div>
+
+<label>Father / Husband Name</label>
+
+<input
+id="customerFather">
+
+</div>
+
+<div>
+
+<label>Gender</label>
+
+<select id="customerGender">
+
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Date of Birth</label>
+
+<input
+type="date"
+id="customerDOB">
+
+</div>
+
+<div>
+
+<label>Mobile</label>
+
+<input
+id="customerMobile">
+
+</div>
+<div>
+
+<label>Customer Photo</label>
+
+<input
+type="file"
+id="customerPhoto"
+accept="image/*">
+
+</div>
+
+<div>
+
+<label>Aadhaar Photo</label>
+
+<input
+type="file"
+id="aadhaarPhoto"
+accept="image/*,.pdf">
+
+</div>
+
+<div>
+
+<label>PAN Photo</label>
+
+<input
+type="file"
+id="panPhoto"
+accept="image/*,.pdf">
+
+</div>
+
+<div>
+
+<label>Customer Signature</label>
+
+<input
+type="file"
+id="customerSign"
+accept="image/*">
+
+</div>
+
+<div>
+
+<label>Aadhaar</label>
+
+<input
+id="customerAadhaar">
+
+</div>
+
+<div>
+
+<label>PAN</label>
+
+<input
+id="customerPAN">
+
+</div>
+
+<div>
+
+<label>Group</label>
+
+<select id="customerGroup">
+
+<option value="">Select Group</option>
+
+</select>
+
+</div>
+
+<div>
+
+<label>Village</label>
+
+<input
+id="customerVillage">
+
+</div>
+
+<div>
+
+<label>Address</label>
+
+<textarea
+id="customerAddress"
+rows="3"></textarea>
+
+</div>
+
+<div>
+
+<label>Status</label>
+
+<select id="customerStatus">
+
+<option value="Active">Active</option>
+
+<option value="Inactive">Inactive</option>
+
+</select>
+
+</div>
+
+</div>
+
+<br>
+
+<button class="btn btn-success" id="saveCustomer">
+
+Save Customer
+
+</button>
+
+<button class="btn btn-danger" id="closeCustomer">
+
+Cancel
+
+</button>
+
+</div>
+
+</div>

@@ -1,0 +1,153 @@
+<div class="card">
+
+    <div class="page-header">
+
+        <h2>Group Management</h2>
+
+        <button class="btn btn-primary" id="addGroupBtn">
+            + Add Group
+        </button>
+
+    </div>
+
+    <br>
+
+    <input
+        type="text"
+        id="searchGroup"
+        placeholder="Search by Group Name or Village">
+
+    <br><br>
+
+    <div class="table-responsive">
+
+<table class="data-table">
+
+        <thead>
+
+        <tr>
+
+            <th>Group ID</th>
+            <th>Group Name</th>
+            <th>Village</th>
+            <th>Members</th>
+            <th>Status</th>
+            <th>Action</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody id="groupTable">
+
+        <tr>
+
+            <td colspan="6" style="text-align:center">
+
+                No Groups Found
+
+            </td>
+
+        </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<!-- Modal -->
+
+<div class="modal hidden" id="groupModal">
+
+<div class="modal-box">
+
+<h2 id="groupModalTitle">
+
+Add Group
+
+</h2>
+
+<br>
+
+<div class="form-grid">
+
+<div>
+
+<label>Group ID</label>
+
+<input
+type="text"
+id="groupID"
+readonly>
+
+</div>
+
+<div>
+
+<label>Group Name</label>
+
+<input
+type="text"
+id="groupName">
+
+</div>
+
+<div>
+
+<label>Village</label>
+
+<input
+type="text"
+id="groupVillage">
+
+</div>
+
+<div>
+
+<label>Total Members</label>
+
+<input
+type="number"
+id="groupMembers"
+min="1"
+value="1">
+
+</div>
+
+<div>
+
+<label>Status</label>
+
+<select id="groupStatus">
+
+<option value="Active">Active</option>
+<option value="Inactive">Inactive</option>
+
+</select>
+
+</div>
+
+</div>
+
+<br>
+
+<button
+class="btn btn-success"
+id="saveGroup">
+
+Save Group
+
+</button>
+
+<button
+class="btn btn-danger"
+id="closeGroup">
+
+Cancel
+
+</button>
+
+</div>
+
+</div>

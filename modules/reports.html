@@ -1,0 +1,126 @@
+<div class="card">
+
+    <div class="card-header">
+
+        <h2>Reports</h2>
+
+    </div>
+
+    <div id="reportContent"></div>
+
+</div>
+<div class="card">
+
+    <div class="card-header">
+
+        <h2>Reports Center</h2>
+
+    </div>
+
+    <div class="report-filter">
+
+        <div>
+
+            <label>Report Type</label>
+
+            <select id="reportType">
+
+                <option value="customer">Customer Report</option>
+
+                <option value="loan">Loan Report</option>
+
+                <option value="collection">Collection Report</option>
+
+                <option value="outstanding">Outstanding Report</option>
+
+                <option value="overdue">Overdue Report</option>
+
+                <option value="ledger">Loan Ledger</option>
+
+                <option value="emi">EMI Schedule</option>
+
+                <option value="guarantor">Guarantor Report</option>
+
+            </select>
+
+        </div>
+
+        <div>
+
+            <label>From Date</label>
+
+            <input type="date" id="fromDate">
+
+        </div>
+
+        <div>
+
+            <label>To Date</label>
+
+            <input type="date" id="toDate">
+
+        </div>
+
+        <div>
+
+            <label>Status</label>
+
+            <select id="reportStatus">
+
+                <option value="">All</option>
+
+                <option>Active</option>
+
+                <option>Closed</option>
+
+                <option>Pending</option>
+
+                <option>Paid</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+    <br>
+
+    <button class="btn btn-success" onclick="generateReport()">
+
+        Generate Report
+
+    </button>
+
+    <button class="btn btn-primary" onclick="printReport()">
+
+        Print
+
+    </button>
+
+    <button class="btn btn-warning" onclick="exportExcel()">
+
+        Excel
+
+    </button>
+
+    <button class="btn btn-danger" onclick="exportPDF()">
+
+        PDF
+
+    </button>
+
+    <hr>
+
+    <div id="reportContainer">
+
+        <table class="table">
+
+            <thead id="reportHead"></thead>
+
+            <tbody id="reportBody"></tbody>
+
+        </table>
+
+    </div>
+
+</div>

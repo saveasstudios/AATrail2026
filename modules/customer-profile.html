@@ -1,0 +1,165 @@
+<img
+src="${profileCustomer.customerPhoto || 'images/no-photo.png'}"
+style="
+width:140px;
+height:160px;
+object-fit:cover;
+border-radius:10px;
+border:2px solid #ccc;
+margin-bottom:20px;">
+<div class="card">
+
+<div class="card-header">
+
+<h2>Customer Profile</h2>
+
+</div>
+
+<div id="profileContainer">
+
+Loading...
+
+</div>
+
+</div>
+<div class="card">
+
+    <div class="card-header">
+
+        <h2>Customer Profile</h2>
+
+        <button class="btn"
+                onclick="loadPage('👥 Customers')">
+
+            ← Back
+
+        </button>
+
+    </div>
+
+    <div id="customerProfile">
+
+        <div class="profile-header">
+
+            <div class="profile-photo">
+
+                <img id="cpPhoto"
+                     src="images/no-photo.png">
+
+            </div>
+
+            <div class="profile-info">
+
+                <h2 id="cpName"></h2>
+
+                <p><b>Customer ID :</b> <span id="cpID"></span></p>
+
+                <p><b>Father Name :</b> <span id="cpFather"></span></p>
+
+                <p><b>Village :</b> <span id="cpVillage"></span></p>
+
+                <p><b>Mobile :</b> <span id="cpMobile"></span></p>
+
+                <p><b>Group :</b> <span id="cpGroup"></span></p>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="dashboard-cards">
+
+            <div class="stat-card">
+
+                <h3>Total Loans</h3>
+
+                <h2 id="cpLoanCount">0</h2>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>Loan Amount</h3>
+
+                <h2 id="cpLoanAmount">₹0</h2>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>Outstanding</h3>
+
+                <h2 id="cpOutstanding">₹0</h2>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>Total Paid</h3>
+
+                <h2 id="cpPaid">₹0</h2>
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <h3>Loans</h3>
+
+        <table class="table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Loan ID</th>
+
+                    <th>Amount</th>
+
+                    <th>Balance</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="cpLoanTable">
+
+            </tbody>
+
+        </table>
+
+        <br>
+
+        <h3>Collections</h3>
+
+        <table class="table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Date</th>
+
+                    <th>Receipt</th>
+
+                    <th>Amount</th>
+
+                    <th>Mode</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="cpCollectionTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
