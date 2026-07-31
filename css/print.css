@@ -1,0 +1,390 @@
+/* ======================================================
+   AARVEE ASSOCIATES
+   Professional Promissory Note Print Style
+====================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+    background:#f2f2f2;
+
+    font-family:
+    "Noto Serif Tamil",
+    Cambria,
+    "Times New Roman",
+    serif;
+
+    color:#111;
+
+}
+
+/* ===================================
+   A4 PAGE
+=================================== */
+
+.a4-page{
+
+    width:210mm;
+
+    min-height:297mm;
+
+    margin:15px auto;
+
+    padding:18mm;
+
+    background:#fff;
+
+    border:1px solid #cfcfcf;
+
+    box-shadow:0 0 12px rgba(0,0,0,.15);
+
+    overflow:hidden;
+
+}
+
+/* ===================================
+   HEADER
+=================================== */
+
+.pm-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    border-bottom:2px solid #000;
+
+    padding-bottom:12px;
+
+    margin-bottom:25px;
+
+}
+
+.pm-header h2{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#1d3557;
+
+    letter-spacing:1px;
+
+}
+
+.pm-header div{
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+/* ===================================
+   CUSTOMER TABLE
+=================================== */
+
+.pm-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-bottom:20px;
+
+}
+
+.pm-table td{
+
+    padding:8px 6px;
+
+    vertical-align:top;
+
+    font-size:18px;
+
+}
+
+.pm-table td:first-child{
+
+    width:200px;
+
+    font-weight:bold;
+
+}
+
+/* ===================================
+   BODY
+=================================== */
+
+.pm-body{
+
+    margin-top:20px;
+
+    text-align:justify;
+
+    text-indent:40px;
+
+    font-size:19px;
+
+    line-height:2.2;
+
+}
+
+/* ===================================
+   WITNESS
+=================================== */
+
+.pm-witness{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-top:40px;
+
+    font-size:18px;
+
+}
+
+/* ===================================
+   THUMB
+=================================== */
+
+.thumb-section{
+
+    text-align:center;
+
+}
+
+.thumb-box{
+
+    width:95px;
+
+    height:110px;
+
+    border:2px solid #000;
+
+    margin:auto;
+
+    margin-bottom:10px;
+
+}
+
+/* ===================================
+   DOCUMENTS
+=================================== */
+
+.pm-images{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-top:45px;
+
+}
+
+.pm-images div{
+
+    flex:1;
+
+    text-align:center;
+
+}
+
+.pm-images img{
+
+    width:100%;
+
+    height:125px;
+
+    object-fit:cover;
+
+    border:1px solid #666;
+
+}
+
+.pm-images p{
+
+    margin-top:8px;
+
+    font-size:15px;
+
+}
+
+/* ===================================
+   SIGNATURE
+=================================== */
+
+.pm-sign{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    text-align:center;
+
+    margin-top:70px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.pm-sign div{
+
+    width:30%;
+
+}
+
+/* ===================================
+   BUTTON AREA
+=================================== */
+
+.no-print{
+
+    width:210mm;
+
+    margin:20px auto;
+
+    text-align:center;
+
+}
+
+.no-print button{
+
+    padding:10px 20px;
+
+    margin:5px;
+
+    font-size:15px;
+
+    border-radius:5px;
+
+}
+
+/* ===================================
+   PAGE SETTINGS
+=================================== */
+
+@page{
+
+    size:A4 portrait;
+
+    margin:12mm;
+
+}
+
+/* ===================================
+   PRINT
+=================================== */
+
+@media print{
+
+html,
+body{
+
+    width:210mm;
+
+    height:297mm;
+
+    background:#fff !important;
+
+    overflow:visible !important;
+
+}
+
+/* Hide Application Layout */
+
+.sidebar,
+.header,
+.navbar,
+.menu,
+.topbar,
+.left-menu,
+.right-panel,
+.footer,
+.no-print,
+.card-header,
+button{
+
+    display:none !important;
+
+}
+
+/* Expand Content */
+
+.main,
+.content,
+.container,
+.page-content{
+
+    width:100% !important;
+
+    margin:0 !important;
+
+    padding:0 !important;
+
+    overflow:visible !important;
+
+}
+
+/* A4 Page */
+
+.a4-page{
+
+    width:100%;
+
+    min-height:auto;
+
+    margin:0;
+
+    padding:0;
+
+    border:none;
+
+    box-shadow:none;
+
+}
+
+.pm-header{
+
+    margin-bottom:18px;
+
+}
+
+.pm-table td{
+
+    font-size:17px;
+
+}
+
+.pm-body{
+
+    font-size:18px;
+
+}
+
+.pm-sign{
+
+    margin-top:60px;
+
+}
+
+}

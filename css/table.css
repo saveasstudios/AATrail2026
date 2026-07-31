@@ -1,0 +1,65 @@
+/* ===================================
+   Tables
+=================================== */
+
+.data-table{
+
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+    background:#fff;
+
+}
+
+.data-table thead{
+
+    background:#1e4fa3;
+    color:#fff;
+
+}
+
+.data-table th{
+
+    padding:15px;
+    text-align:left;
+    font-size:15px;
+    font-weight:600;
+
+}
+
+.data-table td{
+
+    padding:15px;
+    border-bottom:1px solid #e5e5e5;
+    font-size:14px;
+
+}
+
+.data-table tbody tr:hover{
+
+    background:#f4f7ff;
+
+}
+
+.data-table tbody tr:nth-child(even){
+
+    background:#fafafa;
+
+}
+
+/* Buttons inside table */
+
+.data-table button{
+
+    margin-right:5px;
+
+}
+
+/* Responsive */
+
+.table-responsive{
+
+    width:100%;
+    overflow-x:auto;
+
+}

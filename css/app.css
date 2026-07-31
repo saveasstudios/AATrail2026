@@ -1,0 +1,131 @@
+.app{
+
+    display:flex;
+
+    height:100vh;
+
+}
+
+/* Sidebar */
+
+.sidebar{
+
+    width:260px;
+
+    background:#0B3C91;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.sidebar .logo{
+
+    padding:30px;
+
+    text-align:center;
+
+}
+
+.sidebar .logo h2{
+
+    font-size:30px;
+
+}
+
+.sidebar .logo span{
+
+    color:#F5B041;
+
+    letter-spacing:2px;
+
+}
+
+.menu{
+
+    list-style:none;
+
+    margin-top:20px;
+
+}
+
+.menu li{
+
+    padding:16px 25px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    border-left:4px solid transparent;
+
+}
+
+.menu li:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.menu li.active{
+
+    background:rgba(255,255,255,.12);
+
+    border-left:4px solid #F5B041;
+
+}
+
+/* Main */
+
+.main{
+
+    flex:1;
+
+    background:#F4F6F9;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.topbar{
+
+    background:white;
+
+    height:70px;
+
+    padding:0 30px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+
+}
+
+.user-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+#content{
+
+    padding:25px;
+
+    overflow:auto;
+
+    flex:1;
+
+}
