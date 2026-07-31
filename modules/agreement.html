@@ -1,0 +1,500 @@
+<div class="card">
+
+    <div class="card-header">
+
+        <h2>Loan Agreement</h2>
+
+        <div>
+
+            <button class="btn btn-primary" onclick="printAgreement()">
+                🖨 Print
+            </button>
+
+            <button class="btn btn-success"
+                onclick="document.getElementById('signedAgreement').click()">
+                📤 Upload Signed Copy
+            </button>
+
+            <input
+                type="file"
+                id="signedAgreement"
+                accept=".pdf,.jpg,.jpeg,.png"
+                style="display:none"
+                onchange="uploadSignedAgreement(event)">
+
+            <button class="btn"
+                onclick="loadPage('💰 Loans')">
+                ← Back
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="agreementContainer">
+
+        <div id="agreementPrint" class="agreement-page">
+
+            <!-- Company Header -->
+
+            <div class="agreement-header">
+
+                <img src="images/logo.png"
+                    class="company-logo">
+
+                <div>
+
+                    <h1>AARVEE ASSOCIATES</h1>
+
+                    <p>
+                        Finance • Gold Loan • Personal Loan
+                    </p>
+
+                    <h2>LOAN AGREEMENT</h2>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <!-- Agreement Information -->
+
+            <table class="loan-table">
+
+                <tr>
+
+                    <td><strong>Agreement No</strong></td>
+
+                    <td id="agAgreementNo">AGR-000001</td>
+
+                    <td rowspan="7" class="photo-cell">
+
+                        <img
+                            id="agPhoto"
+                            src="images/no-photo.png"
+                            class="customer-photo">
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td><strong>Loan No</strong></td>
+
+                    <td id="agLoanID">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td><strong>Date</strong></td>
+
+                    <td id="agDate">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td><strong>Customer ID</strong></td>
+
+                    <td id="agCustomerID">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td><strong>Customer Name</strong></td>
+
+                    <td id="agCustomerName">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td><strong>Father / Husband</strong></td>
+
+                    <td id="agFatherName">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td><strong>Occupation</strong></td>
+
+                    <td id="agOccupation">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td><strong>Address</strong></td>
+
+                    <td colspan="2" id="agAddress">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td><strong>Village</strong></td>
+
+                    <td colspan="2" id="agVillage">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td><strong>District</strong></td>
+
+                    <td colspan="2" id="agDistrict">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td><strong>State</strong></td>
+
+                    <td colspan="2" id="agState">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td><strong>PIN Code</strong></td>
+
+                    <td colspan="2" id="agPincode">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td><strong>Mobile</strong></td>
+
+                    <td colspan="2" id="agMobile">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td><strong>Aadhaar</strong></td>
+
+                    <td colspan="2" id="agAadhaar">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td><strong>PAN</strong></td>
+
+                    <td colspan="2" id="agPAN">-</td>
+
+                </tr>
+
+            </table>
+
+            <br>
+
+            <!-- Loan Details -->
+
+            <table class="loan-table">
+
+                <tr>
+
+                    <th colspan="2">
+
+                        Loan Details
+
+                    </th>
+
+                </tr>
+
+                <tr>
+
+                    <td>Loan Amount</td>
+
+                    <td id="agLoanAmount">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Interest Rate</td>
+
+                    <td id="agInterest">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Loan Period</td>
+
+                    <td id="agMonths">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Monthly EMI</td>
+
+                    <td id="agEMI">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Total Repayment</td>
+
+                    <td id="agTotalAmount">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Outstanding Balance</td>
+
+                    <td id="agBalance">-</td>
+
+                </tr>
+
+            </table>
+
+            <br>
+
+            <!-- Guarantor -->
+
+            <table class="loan-table">
+
+                <tr>
+
+                    <th colspan="2">
+
+                        Guarantor Details
+
+                    </th>
+
+                </tr>
+
+                <tr>
+
+                    <td>Name</td>
+
+                    <td id="agGuarantor">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Mobile</td>
+
+                    <td id="agGuarantorMobile">-</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Address</td>
+
+                    <td id="agGuarantorAddress">-</td>
+
+                </tr>
+
+            </table>
+
+            <br>
+
+            <p class="agreement-intro">
+
+                This Loan Agreement is entered into between
+                <strong>AARVEE ASSOCIATES</strong>
+                ("Lender") and
+                <strong id="agBorrower">_______________</strong>
+                ("Borrower").
+
+                The Borrower acknowledges receipt of the loan amount and agrees
+                to repay the same together with applicable interest according
+                to the agreed repayment schedule.
+
+                The Borrower and Guarantor jointly agree to abide by all terms
+                and conditions mentioned below.
+
+            </p>
+
+            <br>
+
+            <h3>Terms & Conditions</h3>
+
+            <ol class="agreement-terms">
+                <li>The Borrower confirms that all information and documents submitted to the Lender are true and correct.</li>
+
+<li>The Borrower has voluntarily applied for the loan and agrees to all terms and conditions mentioned in this agreement.</li>
+
+<li>The loan amount shall be repaid in the agreed monthly installments on or before the due date.</li>
+
+<li>The Borrower agrees to pay interest at the rate specified in the Loan Details section.</li>
+
+<li>Any delay or default in payment may result in late payment charges or penalties as determined by the Lender.</li>
+
+<li>The Borrower authorizes the Lender to verify all submitted documents and information whenever required.</li>
+
+<li>The Borrower shall immediately notify the Lender of any change in address, mobile number, employment, or identity details.</li>
+
+<li>The Guarantor accepts joint and several liability for repayment of the loan if the Borrower fails to repay the outstanding amount.</li>
+
+<li>The Lender reserves the right to initiate legal proceedings to recover any unpaid dues in accordance with applicable law.</li>
+
+<li>The Borrower shall not provide false information or conceal any material facts relating to this loan application.</li>
+
+<li>All repayments made by the Borrower shall first be adjusted towards penalties and interest, followed by the principal amount.</li>
+
+<li>The Borrower agrees that this agreement shall remain valid until the entire outstanding loan amount is repaid.</li>
+
+<li>Any dispute arising out of this agreement shall be subject to the jurisdiction of the competent court where the Lender's branch is located.</li>
+
+<li>The Borrower and Guarantor acknowledge that they have carefully read, understood, and accepted all terms and conditions of this agreement.</li>
+
+<li>This agreement becomes legally effective from the date of signing by both parties.</li>
+
+</ol>
+
+<br>
+
+<h3>Customer Documents</h3>
+
+<div class="documents-section">
+
+    <div class="document-box">
+
+        <img id="agPhotoPreview"
+             src="images/no-photo.png"
+             alt="Customer Photo">
+
+        <p>Customer Photo</p>
+
+    </div>
+
+    <div class="document-box">
+
+        <img id="agAadhaarFront"
+             src="images/no-image.png"
+             alt="Aadhaar Front">
+
+        <p>Aadhaar Front</p>
+
+    </div>
+
+    <div class="document-box">
+
+        <img id="agAadhaarBack"
+             src="images/no-image.png"
+             alt="Aadhaar Back">
+
+        <p>Aadhaar Back</p>
+
+    </div>
+
+    <div class="document-box">
+
+        <img id="agPanImage"
+             src="images/no-image.png"
+             alt="PAN Card">
+
+        <p>PAN Card</p>
+
+    </div>
+
+</div>
+
+<br><br>
+
+<div class="thumb-container">
+
+    <div class="thumb-box">
+
+        Thumb Impression
+
+    </div>
+
+</div>
+
+<br><br>
+
+<h3>Declaration</h3>
+
+<p class="agreement-declaration">
+
+I hereby declare that the particulars furnished above are true and correct to the best of my knowledge. I agree to repay the loan amount together with interest and other applicable charges according to the repayment schedule. I understand that failure to repay the loan may result in legal action as per applicable laws.
+
+</p>
+
+<br><br>
+
+<div class="agreement-signatures">
+
+    <div class="signature-box">
+
+        <div class="signature-line"></div>
+
+        <strong>Borrower Signature</strong>
+
+    </div>
+
+    <div class="signature-box">
+
+        <div class="signature-line"></div>
+
+        <strong>Guarantor Signature</strong>
+
+    </div>
+
+    <div class="signature-box">
+
+        <div class="signature-line"></div>
+
+        <strong>Witness 1</strong>
+
+    </div>
+
+    <div class="signature-box">
+
+        <div class="signature-line"></div>
+
+        <strong>Witness 2</strong>
+
+    </div>
+
+</div>
+
+<br><br>
+
+<div class="agreement-footer">
+
+    <div>
+
+        Company Seal
+
+    </div>
+
+    <div>
+
+        <div class="signature-line"></div>
+
+        <strong>Authorized Signatory</strong>
+
+    </div>
+
+</div>
+
+<hr>
+
+<p style="text-align:center;font-size:13px;color:#666;">
+
+AARVEE ASSOCIATES • Loan Agreement • Page 1 of 1
+
+</p>
+
+        </div>
+
+    </div>
+
+</div>
