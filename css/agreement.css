@@ -1,1 +1,454 @@
+/* =====================================================
+   AARVEE ASSOCIATES
+   Loan Agreement - Professional Style
+===================================================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    background:#ececec;
+
+    font-family:
+    "Noto Serif Tamil",
+    Cambria,
+    "Times New Roman",
+    serif;
+
+    color:#222;
+
+}
+
+/* ===============================
+   CARD
+================================ */
+
+.card{
+
+    background:#fff;
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.12);
+
+}
+
+.card-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 20px;
+
+    background:#17375e;
+
+    color:#fff;
+
+}
+
+.card-header h2{
+
+    font-size:24px;
+
+}
+
+.card-header button{
+
+    margin-left:8px;
+
+}
+
+/* ===============================
+   AGREEMENT PAGE
+================================ */
+
+.agreement-page{
+
+    width:210mm;
+
+    min-height:297mm;
+
+    margin:20px auto;
+
+    background:#fff;
+
+    padding:18mm;
+
+    border:1px solid #ccc;
+
+    box-shadow:0 0 10px rgba(0,0,0,.15);
+
+}
+
+/* ===============================
+   HEADER
+================================ */
+
+.agreement-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:20px;
+
+}
+
+.company-logo{
+
+    width:80px;
+
+    height:80px;
+
+    object-fit:contain;
+
+}
+
+.agreement-header h1{
+
+    font-size:30px;
+
+    color:#17375e;
+
+}
+
+.agreement-header h2{
+
+    font-size:22px;
+
+    margin-top:6px;
+
+}
+
+.agreement-header p{
+
+    color:#666;
+
+    margin-top:4px;
+
+}
+
+/* ===============================
+   TABLE
+================================ */
+
+.loan-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:15px;
+
+}
+
+.loan-table th{
+
+    background:#17375e;
+
+    color:#fff;
+
+    padding:10px;
+
+    text-align:left;
+
+    font-size:17px;
+
+}
+
+.loan-table td{
+
+    border:1px solid #444;
+
+    padding:8px 10px;
+
+    font-size:16px;
+
+    vertical-align:top;
+
+}
+
+.loan-table td:first-child{
+
+    width:220px;
+
+    font-weight:600;
+
+}
+
+/* ===============================
+   PHOTO
+================================ */
+
+.photo-cell{
+
+    text-align:center;
+
+}
+
+.customer-photo{
+
+    width:120px;
+
+    height:150px;
+
+    object-fit:cover;
+
+    border:1px solid #444;
+
+}
+
+/* ===============================
+   INTRO
+================================ */
+
+.agreement-intro{
+
+    margin-top:20px;
+
+    text-align:justify;
+
+    line-height:2;
+
+    font-size:17px;
+
+}
+
+/* ===============================
+   TERMS
+================================ */
+
+.agreement-terms{
+
+    margin-top:10px;
+
+    margin-left:24px;
+
+    line-height:2;
+
+    font-size:16px;
+
+}
+
+.agreement-terms li{
+
+    margin-bottom:8px;
+
+}
+
+/* ===============================
+   DOCUMENTS
+================================ */
+
+.documents-section{
+
+    display:flex;
+
+    gap:15px;
+
+    justify-content:space-between;
+
+    margin-top:20px;
+
+}
+
+.document-box{
+
+    flex:1;
+
+    text-align:center;
+
+}
+
+.document-box img{
+
+    width:100%;
+
+    height:130px;
+
+    border:1px solid #444;
+
+    object-fit:cover;
+
+}
+
+.document-box p{
+
+    margin-top:8px;
+
+    font-size:14px;
+
+}
+
+/* ===============================
+   THUMB
+================================ */
+
+.thumb-container{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+.thumb-box{
+
+    width:120px;
+
+    height:120px;
+
+    border:2px solid #333;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    font-size:14px;
+
+}
+
+/* ===============================
+   DECLARATION
+================================ */
+
+.agreement-declaration{
+
+    text-align:justify;
+
+    line-height:2;
+
+    font-size:16px;
+
+}
+
+/* ===============================
+   SIGNATURES
+================================ */
+
+.agreement-signatures{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    text-align:center;
+
+}
+
+.signature-box{
+
+    flex:1;
+
+}
+
+.signature-line{
+
+    height:60px;
+
+    border-bottom:1px solid #000;
+
+    margin-bottom:10px;
+
+}
+
+/* ===============================
+   FOOTER
+================================ */
+
+.agreement-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    margin-top:40px;
+
+}
+
+/* ===============================
+   PRINT
+================================ */
+
+@page{
+
+    size:A4 portrait;
+
+    margin:12mm;
+
+}
+
+@media print{
+
+html,
+body{
+
+    background:#fff;
+
+    width:210mm;
+
+    height:297mm;
+
+}
+
+/* Hide application UI */
+
+.sidebar,
+.header,
+.navbar,
+.menu,
+.footer,
+.card-header,
+.no-print{
+
+    display:none !important;
+
+}
+
+.main,
+.content,
+.container{
+
+    width:100% !important;
+
+    margin:0 !important;
+
+    padding:0 !important;
+
+}
+
+.agreement-page{
+
+    width:100%;
+
+    margin:0;
+
+    padding:0;
+
+    border:none;
+
+    box-shadow:none;
+
+}
+
+}
